@@ -1,0 +1,302 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    transition: all 0.2s linear;
+}
+
+.img-fluid {
+    max-width: 28rem !important;
+}
+
+.exp-img {
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.thumb {
+    text-align: center;
+}
+
+.skill-img {
+    max-width: 5rem;
+}
+
+.cnt-img {
+    max-width: 3rem;
+}
+
+.cnt-link-wrp {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    padding: 0;
+}
+
+#navbar {
+    background: #eb7e04;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    background: #333;
+    height: 1px;
+    transition: all 0.3s linear;
+}
+
+.nav-item:hover:before {
+    width: 100%;
+}
+
+.site-navbar {
+    top: 0;
+    position: fixed;
+}
+
+.close-nav {
+    display: none;
+    margin: auto;
+}
+
+.close-nav img {
+    width: 2.5rem;
+}
+
+
+
+/* landing page */
+.site-hero {
+    width: 100%;
+    position: fixed;
+    background: #444 !important;
+}
+#section-about , .skills , .experience , .projects , .contact{
+    position: relative;
+    transform: translateY(100%);
+}
+.experience{
+    transform: translateY(120%);
+}
+
+.typewriter h1 {
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .08em solid orange;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation:
+        typing 5.5s steps(40, end) infinite forwards,
+        blink-caret .75s step-end infinite;
+    width: 50%;
+}
+
+/* The typing effect */
+@keyframes typing {
+    0% {
+        width: 0
+    }
+
+    50% {
+        width: 50%
+    }
+
+    100% {
+        width: 0%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange;
+    }
+}
+
+.dwn-btn {
+    background: #f56f02;
+    border: 1px solid #f56f02;
+}
+
+.dwn-btn:hover {
+    background: transparent !important;
+    border: 1px solid #f56f02;
+}
+
+
+.popup {
+    opacity: 0;
+    transform: translateY(30px) scale(0);
+    transform-origin: left;
+    transition: all 0.8s ease;
+}
+
+.popup.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.filters-content .grid{
+    gap: 1rem;
+    justify-content: space-around;
+}
+
+.single-portfolio{
+    border: 1px solid #eb7e04;
+    padding: 1rem ;
+    width: 10rem !important;
+    cursor: pointer;
+    box-shadow: 0 0 4px transparent;
+}
+
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+  }
+  
+  @media screen and (max-width:1024px) {
+    .contact{
+        transform: translateY(120%);
+    }
+    
+}
+
+@media screen and (max-width:992px) {
+    .box {
+
+        margin: auto !important;
+    }
+
+    .site-hero,
+    .site-hero .row {
+        min-height: 550px;
+    }
+
+    .nav-items {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        max-width: 425px;
+        background: #eb7e04;
+        height: 90vh !important;
+    }
+
+    .show-nav {
+        left: 0;
+    }
+
+    .nav-items {
+        height: 100%;
+        max-width: 425px;
+        /* transform: translateY(-100%) !important; */
+    }
+
+    .close-nav {
+        display: block;
+    }
+
+    #nav-icon3 {
+        margin-left: 0;
+        display: block;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width:786px) {
+    .experience{
+        transform: translateY(100%);
+    }
+    .contact{
+        transform: translateY(120%);
+    }
+    
+}
+@media screen and (max-width:425px) {
+    section {
+        padding: 2rem !important;
+    }
+    .block-47-image{
+        display: none !important;
+    }
+    .block-47-quote{
+        margin-left: 0 !important;
+    }
+    .box {
+        width: 15rem !important;
+        height: 15rem !important;
+    }
+    .projects{
+        transform: translateY(70%);
+    }
+    .experience{
+        transform: translateY(80%);
+    }
+    .contact{
+        transform: translateY(150%);
+    }
+}
+
+@media screen and (max-width:375px) {
+    .skills{
+        transform: translateY(100%);
+    }
+    .skill-img{
+        width: 3.5rem;
+    }
+    .single-portfolio{
+        width: 8rem !important;
+        border: none;
+    }
+    .experience{
+        transform: translateY(60%);
+    }
+    .projects{
+        transform: translateY(55%);
+    }
+    .contact{
+        transform: translateY(120%);
+    }
+}
+@media screen and (max-width:320px) {
+    .single-portfolio{
+        width: 6rem !important;
+    }
+    .skills{
+        transform: translateY(100%);
+    }
+    .experience{
+        transform: translateY(50%);
+    }
+    .contact{
+        transform: translateY(120%);
+    }
+    .projects{
+        transform: translateY(45%);
+    }
+}
